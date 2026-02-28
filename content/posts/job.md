@@ -8,7 +8,7 @@ draft: false
 Уже почти год я работаю в компании и получаю необходимый мне опыт. Фото прилагается
 
 
-![Моё фото](https://www.wikihow.com/images_en/thumb/d/db/Get-the-URL-for-Pictures-Step-2-Version-6.jpg/v4-460px-Get-the-URL-for-Pictures-Step-2-Version-6.jpg)
+![Моё фото](https://github.com/fkea1da/portfolio/blob/main/static/img/me.jpg?raw=true)
 
 ## ДЕТАЛИ
 
