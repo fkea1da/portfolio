@@ -10,7 +10,7 @@ body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
-  color: #ffffff !important;
+  color:  #000000 !important;
 }
 
 [data-theme='dark'] p,
@@ -20,7 +20,7 @@ body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
 [data-theme='dark'] h4,
 [data-theme='dark'] li,
 [data-theme='dark'] a {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* ===== СВЕТЛАЯ ТЕМА ===== */
@@ -30,7 +30,7 @@ body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
-  color: #000000 !important;
+  color:  #ffffff !important;
 }
 
 [data-theme='light'] p,
@@ -40,5 +40,5 @@ body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
 [data-theme='light'] h4,
 [data-theme='light'] li,
 [data-theme='light'] a {
-  color: #000000 !important;
+  color:  #ffffff !important;
 }
