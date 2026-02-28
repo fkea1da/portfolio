@@ -3,3 +3,7 @@ languageCode = 'ru-ru'
 title = 'Портфолио'
 theme = "PaperMod"
 disableKinds = ["RSS"]
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
