@@ -1,31 +1,145 @@
-/* Для светлой темы */
-:root,
-[data-theme='light'] {
-  background-image: url('https://i.pinimg.com/originals/7c/8c/0a/7c8c0a78a142684c73cd7d8ebca695c5.gif') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-}
-
-/* Для тёмной темы */
-[data-theme='dark'] {
-  background-image: url('https://i.pinimg.com/originals/3f/86/8f/3f868fbdd7b33529386388e701462d6c.gif') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-}
-
-/* Чтобы контент был читаемым на фоне */
+/* ===== БАЗОВЫЕ СТИЛИ ФОНА ===== */
 body {
-  background: transparent !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
+/* Светлая тема */
+[data-theme='light'] body {
+  background-image: url('https://i.pinimg.com/originals/7c/8c/0a/7c8c0a78a142684c73cd7d8ebca695c5.gif') !important;
+}
+
+/* Тёмная тема */
+[data-theme='dark'] body {
+  background-image: url('https://i.pinimg.com/originals/3f/86/8f/3f868fbdd7b33529386388e701462d6c.gif') !important;
+}
+
+/* ===== ПОЛУПРОЗРАЧНЫЙ ОВЕРЛЕЙ ПОВЕРХ ФОНА ===== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* Оверлей для тёмной темы */
+[data-theme='dark'] body::before {
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+}
+
+/* Оверлей для светлой темы */
+[data-theme='light'] body::before {
+  background: radial-gradient(circle at center, transparent 0%, rgba(255,255,255,0.2) 100%);
+}
+
+/* ===== КОНТЕНТ ПОВЕРХ ОВЕРЛЕЯ ===== */
 .main {
-  background-color: rgba(var(--code-bg-rgb), 0.85);
-  backdrop-filter: blur(3px);
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 2rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== СТИЛИ ДЛЯ КАРТОЧЕК КОНТЕНТА ===== */
+.post-content, 
+.page-content,
+.entry-content {
+  transition: all 0.3s ease;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  margin: 1.5rem 0 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Тёмная тема — карточки */
+[data-theme='dark'] .post-content,
+[data-theme='dark'] .page-content,
+[data-theme='dark'] .entry-content {
+  background-color: rgba(20, 20, 20, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Светлая тема — карточки */
+[data-theme='light'] .post-content,
+[data-theme='light'] .page-content,
+[data-theme='light'] .entry-content {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  color: #222 !important;
+}
+
+/* ===== ШАПКА И ПОДВАЛ ===== */
+header,
+footer,
+nav {
+  backdrop-filter: blur(8px) !important;
+  border-radius: 12px !important;
+  margin: 10px !important;
+  padding: 15px !important;
+}
+
+[data-theme='dark'] header,
+[data-theme='dark'] footer,
+[data-theme='dark'] nav {
+  background-color: rgba(20, 20, 20, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme='light'] header,
+[data-theme='light'] footer,
+[data-theme='light'] nav {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ===== ТЕНИ ДЛЯ ТЕКСТА ===== */
+h1, h2, h3, h4, h5, h6, p, li, a, span {
+  transition: text-shadow 0.3s ease;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] p,
+[data-theme='dark'] li,
+[data-theme='dark'] a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme='light'] h1,
+[data-theme='light'] h2,
+[data-theme='light'] h3,
+[data-theme='light'] h4,
+[data-theme='light'] p,
+[data-theme='light'] li,
+[data-theme='light'] a {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+/* ===== СПЕЦИАЛЬНО ДЛЯ ТЁМНОЙ ТЕМЫ ===== */
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+[data-theme='dark'] a:hover {
+  color: #bb9af7 !important;
+  text-shadow: 0 0 8px rgba(187, 154, 247, 0.5);
+}
+
+/* ===== СПЕЦИАЛЬНО ДЛЯ СВЕТЛОЙ ТЕМЫ ===== */
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+[data-theme='light'] a:hover {
+  color: #7e5bc2 !important;
+  text-shadow: 0 0 5px rgba(126, 91, 194, 0.3);
 }
