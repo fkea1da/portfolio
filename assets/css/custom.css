@@ -2,12 +2,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/static/img/white.gif');
+    background-image: url('/img/white.gif');
 }
 
 [data-theme="dark"] .list {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/static/img/black.gif');
+    background-image: url('/img/black.gif');
 }
