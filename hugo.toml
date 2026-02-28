@@ -1,8 +1,9 @@
-baseURL = 'https://about-fkea1da.github.io'
+baseURL = 'https://fkea1da.github.io/about-fkea1da.github.io/'
 languageCode = 'ru-ru'
 title = 'Портфолио'
 theme = "PaperMod"
 disableKinds = ["RSS"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
