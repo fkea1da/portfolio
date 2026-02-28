@@ -1,44 +1,117 @@
-/* ===== ЖИРНЫЙ ШРИФТ ===== */
-body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
-  font-weight: 700 !important;
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --radius: 8px;
+    --theme: rgb(255, 255, 255);
+    --entry: rgb(255, 255, 255);
+    --primary: rgb(30, 30, 30);
+    --secondary: rgb(108, 108, 108);
+    --tertiary: rgb(214, 214, 214);
+    --content: rgb(31, 31, 31);
+    --code-block-bg: rgb(28, 29, 33);
+    --code-bg: rgb(245, 245, 245);
+    --border: rgb(238, 238, 238);
+    color-scheme: light;
 }
 
-/* ===== ТЁМНАЯ ТЕМА ===== */
-[data-theme='dark'] body {
-  background-image: url('https://i.pinimg.com/originals/3f/86/8f/3f868fbdd7b33529386388e701462d6c.gif') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  color:  #000000 !important;
+:root[data-theme="dark"] {
+    --theme: rgb(0, 0, 0);
+    --entry: rgb(46, 46, 51);
+    --primary: rgb(218, 218, 219);
+    --secondary: rgb(155, 156, 157);
+    --tertiary: rgb(65, 66, 68);
+    --content: rgb(196, 196, 197);
+    --code-block-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+    --border: rgb(51, 51, 51);
+    color-scheme: dark;
 }
 
-[data-theme='dark'] p,
-[data-theme='dark'] h1,
-[data-theme='dark'] h2,
-[data-theme='dark'] h3,
-[data-theme='dark'] h4,
-[data-theme='dark'] li,
-[data-theme='dark'] a {
-  color: #000000 !important;
+.list {
+    /* background: var(--code-bg); */
+     background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://i.pinimg.com/originals/3f/86/8f/3f868fbdd7b33529386388e701462d6c.gif);
 }
 
-/* ===== СВЕТЛАЯ ТЕМА ===== */
-[data-theme='light'] body {
-  background-image: url('https://i.pinimg.com/originals/7c/8c/0a/7c8c0a78a142684c73cd7d8ebca695c5.gif') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  color:  #ffffff !important;
+[data-theme="dark"] .list {
+    
+    /* background: var(--theme); */
+
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://i.pinimg.com/originals/7c/8c/0a/7c8c0a78a142684c73cd7d8ebca695c5.gif);
 }
 
-[data-theme='light'] p,
-[data-theme='light'] h1,
-[data-theme='light'] h2,
-[data-theme='light'] h3,
-[data-theme='light'] h4,
-[data-theme='light'] li,
-[data-theme='light'] a {
-  color:  #ffffff !important;
+.main {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--gap);
+}
+
+.page-header h1 {
+    font-size: 40px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination a {
+    color: var(--theme);
+    font-size: 13px;
+    line-height: 36px;
+    background: var(--primary);
+    border-radius: calc(36px / 2);
+    padding: 0 16px;
+}
+
+.pagination .next {
+    margin-inline-start: auto;
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
+}
+
+code {
+    direction: ltr;
+}
+
+div.highlight,
+pre {
+    position: relative;
+}
+
+.copy-code {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(78, 78, 78, 0.8);
+    border-radius: var(--radius);
+    padding: 0 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
+    display: block;
 }
