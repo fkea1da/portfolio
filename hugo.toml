@@ -1,3 +1,4 @@
+baseURL = 'https://fkea1da.github.io/portfolio/'
 languageCode = 'ru-ru'
 title = 'Портфолио'
 theme = "PaperMod"
