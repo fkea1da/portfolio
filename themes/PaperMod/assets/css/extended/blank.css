@@ -1,5 +1,31 @@
-/*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+/* Для светлой темы */
+:root,
+[data-theme='light'] {
+  background-image: url('https://i.pinimg.com/originals/7c/8c/0a/7c8c0a78a142684c73cd7d8ebca695c5.gif') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
 
-Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
-*/
+/* Для тёмной темы */
+[data-theme='dark'] {
+  background-image: url('https://i.pinimg.com/originals/3f/86/8f/3f868fbdd7b33529386388e701462d6c.gif') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Чтобы контент был читаемым на фоне */
+body {
+  background: transparent !important;
+}
+
+.main {
+  background-color: rgba(var(--code-bg-rgb), 0.85);
+  backdrop-filter: blur(3px);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+}
