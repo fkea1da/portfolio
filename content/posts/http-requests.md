@@ -46,4 +46,4 @@ curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d '{"
 
 URL запроса: https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=15/05/2026&date_req2=30/05/2026&VAL_NM_RQ=R01235
 
-![postman](.img/postman.jpg)
+![postman](https://github.com/fkea1da/portfolio/blob/main/static/img/postman.jpg?raw=true)
