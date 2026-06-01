@@ -15,7 +15,7 @@ Host: example.com
 
 ```
 
-![get](../img/get.jpg)
+![get](/img/get.jpg)
 ![post](./static/img/post.jpg)   
 
 ### GET через netcat
@@ -38,7 +38,7 @@ curl -X GET "https://api.publicapis.org/entries?category=animals"
 curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d '{"name": "Ilya", "age": 20}'
 ```
 
-![curl](/static/img/curl.jpg)
+![curl](..img/curl.jpg)
 
 ## Задание 3 — Курс валют через API ЦБ РФ
 
@@ -46,4 +46,4 @@ curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d '{"
 
 URL запроса: https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=15/05/2026&date_req2=30/05/2026&VAL_NM_RQ=R01235
 
-![postman](/static/img/postman.jpg)
+![postman](.img/postman.jpg)
