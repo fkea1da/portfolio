@@ -1,0 +1,10 @@
+# Use this workspace to collaborate
+workspace:
+  id: 1c71e898-9f3f-4a42-85b1-866a7c581154
+
+localResources:
+  docs:
+    - ../themes/PaperMod/README.md
+    - ../content/posts/main.md
+    - ../content/posts/job.md
+quests.md

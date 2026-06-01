@@ -1,3 +1,11 @@
 {{ with resources.Get "css/custom.css" }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}
+
+<style>
+body {
+  background-image: url('/img/white.gif');
+  background-size: cover;
+  background-attachment: fixed;
+}
+</style>
