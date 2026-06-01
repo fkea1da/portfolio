@@ -38,7 +38,7 @@ curl -X GET "https://api.publicapis.org/entries?category=animals"
 curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d '{"name": "Ilya", "age": 20}'
 ```
 
-![curl](..img/curl.jpg)
+![curl](https://github.com/fkea1da/portfolio/blob/main/static/img/curl.jpg?raw=true)
 
 ## Задание 3 — Курс валют через API ЦБ РФ
 
