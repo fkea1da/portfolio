@@ -16,7 +16,7 @@ Host: example.com
 ```
 
 ![get](/img/get.jpg)
-![post](./static/img/post.jpg)   
+![post](https://github.com/fkea1da/portfolio/blob/main/static/img/post.jpg?raw=true)   
 
 ### GET через netcat
 
