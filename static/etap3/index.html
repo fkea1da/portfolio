@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap + Vite + Luxon</title>
+  <script type="module" crossorigin src="./assets/index-CJsSjOOb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CRE-oNph.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <button id="showBtn" class="btn btn-danger btn-lg w-100 py-5 fs-2">
+          Показать время
+        </button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="timeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Выполнил: Шапарь Илья</h5>
+          <button type="button" class="btn-close" data-close></button>
+        </div>
+        <div class="modal-body text-center">
+          <span id="hh" class="fs-1 fw-bold"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
